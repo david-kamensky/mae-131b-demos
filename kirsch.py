@@ -1,3 +1,8 @@
+"""
+Finite element solution of the (truncated) Kirsch problem,
+to illustrate stress concentration and domain-truncation effects.
+"""
+
 from dolfin import *
 from mshr import *
 
