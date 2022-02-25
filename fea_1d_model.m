@@ -40,8 +40,8 @@ for el=1:N_el
     % Add element's integrals to stiffness matrix 
     % and load vector:
     K(node1,node1) = K(node1,node1) + h*EA*phi1_prime*phi1_prime;
-    K(node1,node2) = K(node1,node2) + h*EA*phi1_prime*phi2_prime;
-    K(node2,node1) = K(node2,node1) + h*EA*phi2_prime*phi1_prime;
+    K(node1,node2) = K(node1,node2) + h*EA*phi2_prime*phi1_prime;
+    K(node2,node1) = K(node2,node1) + h*EA*phi1_prime*phi2_prime;
     K(node2,node2) = K(node2,node2) + h*EA*phi2_prime*phi2_prime;
     F(node1) = F(node1) + h*f(z_mid)*phi1;
     F(node2) = F(node2) + h*f(z_mid)*phi2;
