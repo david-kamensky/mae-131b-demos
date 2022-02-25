@@ -1,3 +1,10 @@
+% This MATLAB script implements 1D FEA with linear
+% shape functions, for the problem of an axial 
+% deformation member hanging from a fixed support
+% under its own weight.  A corresponding FEniCS
+% implementation is given in the file
+% "fea_1d_model_fenics.py".
+
 % Properties of the bar:
 E = @(z)(1.0);
 A = @(z)(1.0);
