@@ -41,8 +41,8 @@ for el=1:N_el
     z_mid = 0.5*(z1+z2);
     phi1 = 0.5; % (midpoint evaluation)
     phi2 = 0.5;
-    phi1_prime = 1/h; % (constant derivative)
-    phi2_prime = -1/h;
+    phi1_prime = -1/h; % (constant derivative)
+    phi2_prime = 1/h;
     EA = E(z_mid)*A(z_mid);
     % Add element's integrals to stiffness matrix 
     % and load vector:
