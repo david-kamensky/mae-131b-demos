@@ -115,3 +115,12 @@ s_rt.rename("s_rt","s_rt")
 File("s_rr.pvd") << s_rr
 File("s_tt.pvd") << s_tt
 File("s_rt.pvd") << s_rt
+
+# Failure criteria:
+s = sigma(eps(u))
+
+# Plane-stress von Mises equivalent stress:
+vM = project(sqrt(s[0,0]**2 + s[1,1]**2
+                  - s[0,0]*s[1,1] + 3*s[0,1]**2),S)
+vM.rename("vM","vM")
+File("vM.pvd") << vM
